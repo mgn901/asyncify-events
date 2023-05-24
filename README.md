@@ -2,14 +2,14 @@
 
 A TypeScript library to make function call through message as async function.
 
-WIP: Working to publish this library on npm.
+WIP: Working on publish this library on npm.
 
 ## Example
 
 ### In the main thread
 
 ````typescript
-import ClientTerminal from '@mgn901/asyncify-events';
+import { ClientTerminal } from '@mgn901/asyncify-events';
 
 const worker = new Worker('/path/to/worker.js');
 
@@ -33,7 +33,7 @@ const { request: sum, terminate } = new ClientTerminal<number[], number>({
 ### In the worker thread
 
 ````typescript
-import ServerTerminal from '@mgn901/asyncify-events';
+import { ServerTerminal } from '@mgn901/asyncify-events';
 
 const globalScope = self as DedicatedWorkerGlobalScope;
 
@@ -52,7 +52,7 @@ const { terminate } = new ServerTerminal<number[], number>({
 
 ## How it works?
 
-See [JavaScriptのメッセージングをカプセル化する - mgn901](https://scrapbox.io/mgn901/JavaScriptのメッセージングをカプセル化する) (Japanese only at present)
+See [JavaScriptのメッセージングをカプセル化する - mgn901 / めがね901](https://scrapbox.io/mgn901/JavaScriptのメッセージングをカプセル化する) (Japanese only at present)
 
 ## Author
 
